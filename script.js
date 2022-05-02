@@ -1,7 +1,7 @@
 "use strict";
 
 const bmi = window.prompt("BMIの値を入力してください");
-const p_element = document.querySelector("p");
+const p_element = document.getElementById("third");
 p_element.textContent = `あなたのBMIは${bmi}： `;
 
 if (bmi > 25) {

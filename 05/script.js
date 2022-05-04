@@ -1,14 +1,15 @@
 "use strict";
 
-const array = [1, 2, 3];
+const array = [1, 2, 3, 4, 5];
 
-// const newArray = array.map((el) => el + "号");
-// console.log(newArray); // [1号,2号,3号]
+// const newArray = array.filter((el) => el > 3);
+// console.log(newArray);
 
-// 同じ処理をfor - of文で書くと;
+// 同じ処理をfor-of文で書くと
 const newArray2 = [];
 for (const el of array) {
-  console.log(el);
-  newArray2.push(el + "号");
+  if (el > 3) {
+    newArray2.push(el);
+  }
 }
 console.log(newArray2);

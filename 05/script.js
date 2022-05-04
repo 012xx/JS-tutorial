@@ -2,8 +2,13 @@
 
 const array = [1, 2, 3];
 
-const tail = array.pop(); // 末尾削除
-console.log(tail);
+// const newArray = array.map((el) => el + "号");
+// console.log(newArray); // [1号,2号,3号]
 
-let head = array.shift(); // 先頭を削除
-console.log(head);
+// 同じ処理をfor - of文で書くと;
+const newArray2 = [];
+for (const el of array) {
+  console.log(el);
+  newArray2.push(el + "号");
+}
+console.log(newArray2);

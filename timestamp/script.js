@@ -7,7 +7,7 @@ const birthday = window.prompt("誕生日を入力 例) 2001-04-01");
 const date = new Date(birthday);
 
 const timestamp = date.getTime();
-const postTime = timestamp + 10800000;
+const postTime = timestamp / 1000 + 10800;
 console.log(timestamp);
 
 console.log("結果を表示します");

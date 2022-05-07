@@ -14,15 +14,19 @@ const thisYearBirth = `${nowYear}-${birthday}`;
 console.log(`今年の誕生日は${thisYearBirth}ですね？`);
 
 // 04.3でできたやつをtimestampにする
-const date = new Date(thisYearBirth);
+let date = new Date(thisYearBirth);
 const timestamp = date.getTime();
 console.log(`今年の貴方の誕生日のタイムスタンプは${timestamp}です。`);
 
 // 05.4のtimestampと2のtimestampを比較して、4の方が大きくなるまで3の年を+1していく
-// 1年後のタイムスタンプは31536000
-const nextBirtday = timestamp;
+let nextBirtday = timestamp;
+let nextYear = nowYear;
 while (nextBirtday < nowTimestamp) {
-  nextBirtday += 31536000;
+  nextYear = nowYear + 1;
+  const nextYearBirth = `${nextYear}-${birthday}`;
+  console.log(`次の誕生日は${nextYearBirth}ですね？`);
+  date = new Date(nextYearBirth);
+  nextBirtday = date.getTime();
 }
 console.log(`次の誕生日のタイムスタンプは${nextBirtday}です。`);
 

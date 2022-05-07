@@ -2,24 +2,32 @@
 const birthday = window.prompt("誕生日を入力 例) 04-01");
 
 // 02.現在のtimestampを取得
-const now_timestamp = new Date().getTime();
-console.log(`現在時刻のタイムスタンプは：${now_timestamp}です`);
+const nowTimestamp = new Date().getTime();
+console.log(`現在時刻のタイムスタンプは：${nowTimestamp}です`);
 
 // 03. 現在の年を取得し、2022-を1で取得した入力値の頭につける
-const now_time = new Date();
-const now_year = now_time.getFullYear();
-console.log(`現在の西暦は${now_year}です。`);
+const nowTime = new Date();
+const nowYear = nowTime.getFullYear();
+console.log(`現在の西暦は${nowYear}です。`);
 
-const thisYear_birth = `${now_year}-${birthday}`;
-console.log(`今年の誕生日は${thisYear_birth}ですね？`);
+const thisYearBirth = `${nowYear}-${birthday}`;
+console.log(`今年の誕生日は${thisYearBirth}ですね？`);
 
 // 04.3でできたやつをtimestampにする
-const date = new Date(thisYear_birth);
+const date = new Date(thisYearBirth);
 const timestamp = date.getTime();
 console.log(`今年の貴方の誕生日のタイムスタンプは${timestamp}です。`);
 
 // 05.4のtimestampと2のtimestampを比較して、4の方が大きくなるまで3の年を+1していく
 // 1年後のタイムスタンプは31536000
+const nextBirtday = timestamp;
+while (nextBirtday < nowTimestamp) {
+  nextBirtday += 31536000;
+}
+console.log(`次の誕生日のタイムスタンプは${nextBirtday}です。`);
+
+const postTime = nextBirtday / 1000 + 10800;
+console.log(`Slackに投稿される時間は${postTime}です`);
 
 // const date = new Date(birthday);
 

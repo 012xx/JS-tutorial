@@ -1,5 +1,9 @@
 // 01.誕生日の入力(例：04-17)
 const birthday = window.prompt("誕生日を入力 例) 04-01");
+// console.log(birthday.match(/(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])/));
+if (!birthday.match(/(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])/)) {
+  console.log("error!!");
+}
 
 // 02.現在のtimestampを取得
 const nowTimestamp = new Date().getTime();

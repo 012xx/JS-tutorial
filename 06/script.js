@@ -16,6 +16,11 @@ const evList = [
   { name: "シャワーズ", type: "みず", weight: 29.0, ability: "ちょすい" },
 ];
 
-for (const ev of evList) {
-  console.log(`${ev.name}のタイプは${ev.type}です`);
+const nameList = evList
+  .filter((ev) => ev.weight > 25)
+  .map((ev) => `${ev.name}(${ev.weight}kg)`);
+
+// nameListは普通の配列
+for (const n of nameList) {
+  console.log(n);
 }

@@ -1,29 +1,21 @@
 "use strict";
 
-const profile = {
-  name: "OJK",
-  bloodType: "A",
-  servants: ["犬", "猿", "雉"],
-  style: { height: 165, weight: 52, waist: 76 },
-};
+const evList = [
+  { name: "サンダース", type: "でんき", weight: 24.5, ability: "ちくでん" },
+  { name: "ブースター", type: "ほのお", weight: 25.0, ability: "もらいび" },
+  { name: "エーフィ", type: "エスパー", weight: 26.5, ability: "シンクロ" },
+  { name: "ブラッキー", type: "あく", weight: 27.0, ability: "シンクロ" },
+  { name: "リーフィア", type: "くさ", weight: 25.5, ability: "リーフガード" },
+  {
+    name: "ニンフィア",
+    type: "フェアリー",
+    weight: 23.5,
+    ability: "メロメロボディ",
+  },
+  { name: "グレイシア", type: "こおり", weight: 25.9, ability: "ゆきがくれ" },
+  { name: "シャワーズ", type: "みず", weight: 29.0, ability: "ちょすい" },
+];
 
-console.log(profile.servants[2]);
-console.log(profile.style.height);
-
-// profile.servantsは単なる配列
-for (const servant of profile.servants) {
-  console.log(`家来：${servant}`);
-}
-
-// profile.styleは単なるオブジェクト
-const myStyle = profile.style;
-for (const prop in myStyle) {
-  console.log(`${prop} is ${myStyle[prop]}`);
-}
-
-// Object.entriesを使ってfor-of文で書く
-for (const [prop, val] of Object.entries(profile)) {
-  if (prop == "name" || prop == "bloodType") {
-    console.log(`${prop}は${val}です`);
-  }
+for (const ev of evList) {
+  console.log(`${ev.name}のタイプは${ev.type}です`);
 }

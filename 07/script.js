@@ -2,7 +2,9 @@
 
 const servants = ["犬", "猿", "雉"];
 
-function showServants() {
+function appendServants(newcomer) {
+  servants.push(newcomer);
+
   console.log("現在の家来は：");
   for (const servant of servants) {
     console.log(servant);
@@ -10,10 +12,6 @@ function showServants() {
   console.log(`の総勢${servants.length}名です。`);
 }
 
-showServants();
-
-servants.push("鬼");
-showServants();
-
-servants.push("桃");
-showServants();
+appendServants("鬼");
+appendServants("桃");
+appendServants("爺");

@@ -40,14 +40,14 @@ table.appendChild(tr);
 
 // evListをevで回す
 for (const ev of evList) {
-  // tr要素を新規作成する
+  // tr要素を新規作成する("サンダース"、"でんき"…)
   const tr = document.createElement("tr");
   //
   for (const prop in ev) {
     console.log(prop);
     // tdリストを新規作成する
     const td = document.createElement("td");
-    //
+    // evListの中身をtdに挿入する
     td.textContent = ev[prop];
     // もし、weightだった場合はtd末尾に"kg"をつける
     if (prop == "weight") {

@@ -2,9 +2,16 @@
 
 const obj = {
   name: "OJK",
-  sayHello: function () {
-    console.log("Hello World!!");
+  sayHello() {
+    console.log(`Hello ${this.name}!!`);
+  },
+  sayHelloTwice() {
+    this.sayHello();
+    this.sayHello();
   },
 };
 
-obj.sayHello();
+obj.sayHello(); // → Hello OJK!!
+
+obj.name = "桃太郎";
+obj.sayHelloTwice(); // → Hello 桃太郎!! Hello 桃太郎!!

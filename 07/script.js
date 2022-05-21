@@ -1,6 +1,8 @@
 "use strict";
 
-const sayHello = (who) => `Hello${who}!!`; // 関数宣言
+const sayHello = function (who) {
+  return `Hello ${who}!!`;
+};
 
-const msg = sayHello("World");
-console.log(msg); // →Hello World!!
+const msg = sayHello("World"); // 関数呼び出し
+console.log(msg); // → Hello World!!

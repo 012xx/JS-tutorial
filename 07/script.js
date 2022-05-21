@@ -1,8 +1,10 @@
 "use strict";
 
-const sayHello = function (who) {
-  return `Hello ${who}!!`;
+const obj = {
+  name: "OJK",
+  sayHello: function () {
+    console.log("Hello World!!");
+  },
 };
 
-const msg = sayHello("World"); // 関数呼び出し
-console.log(msg); // → Hello World!!
+obj.sayHello();

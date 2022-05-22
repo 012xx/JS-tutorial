@@ -2,7 +2,10 @@
 
 const lis = document.querySelectorAll("li");
 
-for (const li of lis) {
-  console.log(li.textContent);
-  li.textContent = "DOM!!"; // HTMLが書き変わる
+const lisArray = Array.from(lis); // NodeListを配列に変換
+const newLis = lisArray.map((li) => li.textContent + "!!");
+
+// 配列を順に表示する
+for (let i in newLis) {
+  console.log(newLis[i]);
 }

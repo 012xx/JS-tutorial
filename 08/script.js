@@ -1,10 +1,6 @@
 "use strict";
 
-const a = document.getElementById("link"); // a要素の取得
-console.log(a); // a要素の表示
-
-const p = a.parentElement; // 親要素
-console.log(p); // aの親要素の表示
-
-const img = a.firstElementChild; // 最初の親要素
-console.log(img); //
+const ul = document.querySelector("ul");
+console.log(ul.childNodes);
+// → NodeList(7) [text,li,text,li,text]
+// 改行文字がテキストノードとしてli要素の間に含まれる

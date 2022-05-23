@@ -6,4 +6,4 @@ newLi.textContent = "DOM!!";
 
 const li1 = ul.firstElementChild; // ul要素の先頭の子要素
 
-ul.insertBefore(newLi, li1); // ul要素の先頭の子要素の手前に挿入
+ul.insertBefore(newLi, li1.nextElementSibling); // ul要素の先頭の子要素の手前に挿入

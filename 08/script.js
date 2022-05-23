@@ -1,7 +1,7 @@
 "use strict";
 
-const ul = document.getElementById("list"); // 親要素 → ul
+const ul = document.getElementById("list"); // 親要素 ul
+const newLi = document.createElement("li"); // li要素を作成
+newLi.textContent = "DOM!!";
 
-for (let li = ul.firstElementChild; li != null; li = li.nextElementSibling) {
-  console.log(li.textContent);
-}
+ul.appendChild(newLi); // ul要素の最後にliエレメントを追加

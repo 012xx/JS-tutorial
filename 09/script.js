@@ -2,6 +2,9 @@
 
 const a = document.getElementById("link");
 
-console.log(a.target); // →_blank
+const attrs = a.attributes; // → 属性一覧を取得
 
-a.removeAttribute("target");
+// for-ofが使える
+for (const attr of attrs) {
+  console.log(attr); // → id="link" → ...
+}

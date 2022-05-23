@@ -1,7 +1,9 @@
 "use strict";
 
-const ul = document.getElementById("list"); // 親要素 ul
-const newLi = document.createElement("li"); // li要素を作成
+const ul = document.getElementById("list");
+const newLi = document.createElement("li");
 newLi.textContent = "DOM!!";
 
-ul.appendChild(newLi); // ul要素の最後にliエレメントを追加
+const li1 = ul.firstElementChild; // ul要素の先頭の子要素
+
+ul.insertBefore(newLi, li1); // ul要素の先頭の子要素の手前に挿入

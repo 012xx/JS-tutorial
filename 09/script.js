@@ -17,3 +17,22 @@ a.href = "https://loremflickr.com/320/240/dog";
 console.log(`元の画像ソース:${img.href}`);
 // 画像も同様に書き換える
 img.src = "https://loremflickr.com/320/240/dog";
+
+// terget属性の内容で場合分け
+let text;
+if (a.target == "_blank") {
+  text = "別のタブで開きます";
+} else {
+  text = "同じタブで開きます";
+}
+
+// 変数textの内容を持ったテキストノードを生成(引数で内容を指定)
+const textNode = document.createTextNode(text);
+
+// br要素を生成
+const br = document.createElement("br");
+
+// 2つ目のp要素を呼び出して子要素として追加
+const p = document.getElementsByTagName("p")[1];
+p.appendChild(br);
+p.appendChild(textNode); // テキストノードもappendChildできる

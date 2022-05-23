@@ -1,9 +1,9 @@
 "use strict";
 
 const ul = document.getElementById("list");
-const newLi = document.createElement("li");
-newLi.textContent = "DOM!!";
 
-const li1 = ul.firstElementChild; // ul要素の先頭の子要素
+const li1 = ul.firstElementChild; // 1番目の要素
+const li2 = li1.nextElementSibling; // 2番目の要素
+const li3 = li2.nextElementSibling; // 3番目の要素
 
-ul.insertBefore(newLi, li1.nextElementSibling); // ul要素の先頭の子要素の手前に挿入
+ul.appendChild(li1); // 先頭要素が最後尾に移動する

@@ -1,6 +1,12 @@
 "use strict";
 
-const p = document.getElementById("p_id");
-console.log(p.className); // → p_class
+// ダイアログからの入力によってスタイルを変える
+const flag = window.prompt("A, B, or C");
 
-p.className = "myStyle"; // myStyleクラスに切り替え
+p.className = "baseStyle";
+
+if (flag == "A") {
+  p.className += "p_class";
+} else if (flag == "B") {
+  p.className += "myStyle";
+}

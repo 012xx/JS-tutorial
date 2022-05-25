@@ -1,12 +1,15 @@
 "use strict";
 
-// ダイアログからの入力によってスタイルを変える
-const flag = window.prompt("A, B, or C");
+const p = document.getElementById("p_id");
+console.log(p.classList);
+// → DOMTokenList ["p_class", value: "p_class"]
 
-p.className = "baseStyle";
+p.className = "baseStyle"; // classNameプロパティも併用できる
+
+const flag = window.prompt("A,B, or C");
 
 if (flag == "A") {
-  p.className += "p_class";
+  p.classList.add("p_class"); // p_classを追加
 } else if (flag == "B") {
-  p.className += "myStyle";
+  p.classList.add("myStyle"); // myStyleを追加
 }

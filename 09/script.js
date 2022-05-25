@@ -2,7 +2,7 @@
 
 const p = document.getElementById("p_id");
 
-// baseStyleクラスがclassListに含まれていなければ追加する
-if (p.classList.contains("baseStyle") == false) {
-  p.classList.add("baseStyle");
+if (p.classList.contains("p_class") == true) {
+  p.classList.remove("p_class"); // 削除
+  p.classList.add("baseStyle", "myStyle"); // 追加
 }

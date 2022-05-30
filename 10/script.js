@@ -29,6 +29,6 @@ button.addEventListener("mouseleave", () => {
 const img = document.querySelector("img");
 
 img.addEventListener("click", (e) => {
-  const img = e.currentTarget;
-  img.src = "https://github.com/ugok-girls.png";
+  // ブラウザー座標系でのクリック位置
+  console.log(e.clientX, e.clientY);
 });

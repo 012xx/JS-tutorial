@@ -55,3 +55,12 @@ window.addEventListener("resize", () => {
   const p = document.getElementById("target");
   p.style.backgroundColor = "gold";
 });
+
+// a要素の作成
+const a = document.createElement("a");
+a.href = "https://zenn.dev/ojk";
+a.textContent = "リンク先に飛びます";
+
+// script要素の上に追加
+const script = document.querySelector("script");
+document.body.insertBefore(a, script);

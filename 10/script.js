@@ -50,3 +50,8 @@ img.addEventListener("click", (e) => {
 // ブラウザー座標系： clientX／clientY(ブラウザーからはみ出して見えない部分も含めたウェブページの左上角を原点とする座標系)
 // スクリーン座標系： screenX／screenY(PC の画面のこと)
 // ページ座標系：pageX／pageY
+
+window.addEventListener("resize", () => {
+  const p = document.getElementById("target");
+  p.style.backgroundColor = "gold";
+});

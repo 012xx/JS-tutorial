@@ -40,5 +40,13 @@ img.addEventListener("click", (e) => {
   p.textContent = `X:${e.offsetX} Y:${e.offsetY}`;
 
   // 親要素はbody要素、img要素の下に挿入
+  // img 要素の下にエレメントを追加するために insertBefore メソッド を呼び出す
+  // nextElementSibling → 次(要素の後ろ)に追加する
   document.body.insertBefore(p, img.nextElementSibling);
 });
+
+// ※ 下に行くほど広い範囲の座標系
+// 要素座標系 ： offsetX／offsetY
+// ブラウザー座標系： clientX／clientY(ブラウザーからはみ出して見えない部分も含めたウェブページの左上角を原点とする座標系)
+// スクリーン座標系： screenX／screenY(PC の画面のこと)
+// ページ座標系：pageX／pageY

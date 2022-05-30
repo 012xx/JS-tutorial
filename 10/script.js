@@ -28,6 +28,7 @@ button.addEventListener("mouseleave", () => {
 // img 要素をクリックすると画像を切り替えるように
 const img = document.querySelector("img");
 
-img.addEventListener("click", () => {
+img.addEventListener("click", (e) => {
+  const img = e.currentTarget;
   img.src = "https://github.com/ugok-girls.png";
 });

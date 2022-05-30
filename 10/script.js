@@ -32,3 +32,13 @@ img.addEventListener("click", (e) => {
   // ブラウザー座標系でのクリック位置
   console.log(e.clientX, e.clientY);
 });
+
+img.addEventListener("click", (e) => {
+  const p = document.createElement("p"); // p要素を生成
+
+  // 要素座標系でのクリック位置
+  p.textContent = `X:${e.offsetX} Y:${e.offsetY}`;
+
+  // 親要素はbody要素、img要素の下に挿入
+  document.body.insertBefore(p, img.nextElementSibling);
+});

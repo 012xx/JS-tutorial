@@ -72,3 +72,16 @@ document.body.insertBefore(a, script);
 //     ev.preventDefault(); // 規定動作をブロック
 //   });
 // });
+
+const letPGold = () => {
+  const p = document.getElementById("terget");
+  p.style.background = "gold";
+};
+
+window.addEventListener("resize", letGold);
+
+const button2 = document.querySelector("button");
+button2.addEventListener("click", () => {
+  window.removeEventListener("resize", letPGold);
+  button.disabled = true; // disabledを有効にする
+});

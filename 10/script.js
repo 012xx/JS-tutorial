@@ -64,3 +64,11 @@ a.textContent = "リンク先に飛びます";
 // script要素の上に追加
 const script = document.querySelector("script");
 document.body.insertBefore(a, script);
+
+// 動作せんかった😥：リンク移動を阻止する
+// button.addEventListener("click", () => {
+//   a.textContent = "リンク先に飛びません";
+//   a.addEventListener("click", (ev) => {
+//     ev.preventDefault(); // 規定動作をブロック
+//   });
+// });

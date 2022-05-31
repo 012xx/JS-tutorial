@@ -5,10 +5,14 @@ console.log(button); // → <button>ボタン</button>
 
 // ボタンをクリックするとクラスが切り替わるように
 
-button.addEventListener("click", () => {
-  const p = document.getElementById("target");
-  p.classList.toggle("myStyle");
-});
+button.addEventListener(
+  "click",
+  () => {
+    const p = document.getElementById("target");
+    p.classList.toggle("myStyle");
+  },
+  { once: ture }
+);
 
 button.addEventListener("click", () => {
   const p = document.getElementById("target");
